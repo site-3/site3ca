@@ -1,0 +1,17 @@
+{
+  "name": "site3",
+  "version": "0.0.1",
+  "engines": [
+    "node >= 0.6.0"
+  ],
+  "main": "app.js",
+  "dependencies": {
+    "jade": "*",
+    "jade-ext": "*",
+    "express": "~3.x",
+  },
+  "devDependencies": {
+    "grunt-contrib-compass": "*"
+    "grunt-contrib-watch": "*"
+  }
+}

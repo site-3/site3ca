@@ -1,0 +1,20 @@
+{
+  "name": "site3ca",
+  "version": "0.0.0",
+  "authors": [
+    "katee <hello@kate.io>"
+  ],
+  "main": "app.js",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "public/components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "cufon": "*"
+  }
+}

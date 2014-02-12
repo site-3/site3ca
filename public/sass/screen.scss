@@ -1,0 +1,62 @@
+@import "compass/reset";
+@import "compass/utilities/general/clearfix";
+@import "colors";
+@import "typo";
+@import "header";
+@import "footer";
+
+body {
+  background-image: url(/images/bg.jpg);
+  background-size: cover;
+  color: #eee;
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  font-family: sans-serif;
+  font-size: 13pt;
+}
+
+.background-mask {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.75);
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+ul {
+  list-style: circle;
+  margin-left: 2em;
+  margin-bottom: 1em;
+}
+
+a {
+  color: $brandColor;
+}
+
+a:hover {
+  color: lighten($brandColor, 10%);
+}
+
+a:focus, .btn:focus {
+  outline: none;
+}
+
+#main {
+  min-height: 100%;
+  padding: 0 5em;
+}
+
+.container {
+  padding: 0 80px;
+  width: auto !important;
+  position: relative;
+  max-width: 1125px !important;
+  margin: 0 auto;
+  clear: both;
+  @include clearfix;
+}

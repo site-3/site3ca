@@ -1,0 +1,55 @@
+$headerLinkColor: darken(#fff, 10%);
+$headerLinkHoverColor: #fff;
+
+.header {
+  width: 100%;
+  margin: 0;
+  padding: 20px 0 20px 0;
+
+  .brand {
+    float: left;
+
+    a {
+      font-size: 35pt;
+      line-height: 1;
+      text-wrap: nowarp;
+    }
+
+    .tagline {
+      font-weight: normal;
+      display: block;
+      line-height: 1.3;
+    }
+  }
+
+  .nav {
+    float: right;
+    padding-top: 24px;
+
+    li {
+      display: inline-block;
+    }
+
+    a {
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 1em;
+      color: $headerLinkColor;
+
+      &:hover {
+        color: $headerLinkHoverColor;
+      }
+    }
+  }
+
+  .nav > li > a {
+  }
+
+  .nav > li:last-child > a {
+    padding-right: 0;
+  }
+
+  .nav > li:first-child > a {
+    padding-left: 0;
+  }
+}
