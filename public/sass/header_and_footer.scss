@@ -1,0 +1,132 @@
+// something is wrong in my setup that I need to import this here
+@import "colors";
+@import "compass/css3/border-radius";
+
+$footerHeight: 200px;
+$footerMarginTop: 0px;
+
+$headerFooterTextColor: #4d4d4d;
+
+.pre-footer {
+  min-height: 100vh;
+  padding-bottom: $footerHeight;
+}
+
+.header {
+  $headerLinkColor: $headerFooterTextColor;
+  $headerLinkHoverColor: #000;
+
+  width: 100%;
+  margin: 0;
+  background: $headerBackgroundColor;
+
+  .brand {
+    float: left;
+    margin-top: .5em;
+    padding-left: 80px;
+
+    img {
+      position: absolute;
+      left: 0;
+    }
+
+    a {
+      color: $headerFooterTextColor;
+      font-size: 23pt;
+      line-height: 1;
+      text-wrap: nowarp;
+
+      &:hover {
+        color: $headerBrandLinkColor;
+      }
+    }
+
+    .tagline {
+      font-weight: 600;
+      display: block;
+      line-height: 1.3;
+      color: lighten($headerFooterTextColor, 20%);
+    }
+  }
+
+  .nav {
+    float: right;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: inline-block;
+    }
+
+    a {
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 1.5em 1em;
+      display: inline-block;
+      color: $headerLinkColor;
+
+      &:hover {
+        color: $headerLinkHoverColor;
+      }
+    }
+  }
+
+  .nav > li:last-child > a {
+    padding-right: 0;
+  }
+
+  .nav > li:first-child > a {
+    padding-left: 0;
+  }
+}
+
+.footer {
+  height: $footerHeight;
+  margin-top: -$footerHeight + $footerMarginTop;
+  font-size: 12pt;
+  background: $headerBackgroundColor;
+  color: $headerFooterTextColor;
+
+  .container {
+    padding: 1em 0;
+  }
+
+  .heading {
+    margin-bottom: .25em;
+    margin-top: 0;
+  }
+
+  .hours {
+    td {
+      padding-right: 1em;
+    }
+    .member-hours {
+      color: $lightTextColor;
+    }
+    span {
+      color: $lightTextColor;
+    }
+    .callout {
+      color: $altBrandColor;
+    }
+  }
+
+  .social-icons {
+    img {
+      margin-right: 10px;
+    }
+  }
+
+  .footer-map {
+    text-align: right;
+
+    #footer-map {
+      float: right;
+      height: 140px;
+      width: 300px;
+      background: rgba(0, 0, 0, .5);
+      border: 5px solid rgba(0,0,0,.1);
+      @include border-radius(3px);
+    }
+  }
+}

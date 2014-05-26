@@ -7,49 +7,68 @@ html
       - else
         = title
     meta(name="viewport", content="initial-scale=1.0, maximum-scale=1.0")
-    link(rel="alternate", type="application/rss+xml", title="Propane and Electrons", href="/feed")
     link(rel="icon", type="image/png", href="/favicon.ico")
+    link(rel='stylesheet', href='/components/bootstrap/css/bootstrap.css')
     link(rel='stylesheet', href='/css/screen.css')
     script(src="//ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js")
+    script(src="//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false")
+    script(src="/js/all.js")
     script(src="/components/cufon/cufon.js")
     script(src="/neutra.font.js")
     script(type="text/javascript")
-      Cufon.replace('h1,h2,h3,h4,h5,h6,.header a', {hover: true});
+      Cufon.replace('h1,h2,h3,h4,h5,h6,.header a,.landing', {hover: true});
     block head
   body
-    .background-mask
-    .header
-      .container
-        .brand
-          a(href='/') Site3 coLaboratory
-          span.tagline
-            span.main Art and technology workspace
-        ul.nav
-          li: a(href="/about") About
-          li: a(href="/membership") Membership
-          li: a(href="/classes") Events &amp; Classes
-          li: a(href="/tools") Tools
-          li: a(href="/projects") Projects
+    .pre-footer
+      .background-mask
+      .header
+        .container
+          .brand
+            a(href='/')
+              img(src="/images/header-logo.png")
+              | Site 3 coLaboratory
+            span.tagline
+              span.main Art and technology workspace
+          ul.nav
+            li: a(href="/about") About
+            li: a(href="/membership") Membership
+            li: a(href="/classes") Events / Classes
+            li: a(href="/tools") Tools / Facilities
+            li: a(href="/projects") Projects
 
-    #main.container
-      .content
+      #main.container
         block content
 
     .footer
       .container
-        table.hours
-          tr
-            td Thursday
-            td 7pm &ndash; late
-          tr
-            td Monday
-            td 7pm &ndash; 10pm
-          tr
-            td Saturday
-            td noon &ndash; 6pm
-          tr
-            td Sunday
-            td noon &ndash; 6pm
+        .col-md-4
+          h3.heading Hours
+          table.hours
+            tr
+              td Thursday <span class="callout">Public</span>
+              td 7pm &ndash; late
+            tr
+              td Monday <span class=callout>Ladies + LGBTQ</span>
+              td 7pm &ndash; 10pm
+            tr
+              td Saturday <span>Associate Members<span>
+              td noon &ndash; 6pm
+            tr
+              td Sunday <span>Associate Members</span>
+              td noon &ndash; 6pm
+            tr.member-hours
+              td(colspan="2") 24/7 access is available with a <a href="/membership">membership</a>
+        .col-md-4
+          h3.heading Contact
+          p Email us at <a href="mailto:info@site3.ca">info@site3.ca</a>
+          .social-icons
+            a(href="https://twitter.com/site3colab", target="_blank")
+              img(src="/images/twitter-logo.png")
+            a(href="https://www.facebook.com/site3colab", target="_blank")
+              img(src="/images/facebook-logo.png")
+        .col-md-4.footer-map
+          #footer-map
+          a(href="location") Complete map and location &rarr;
 
   script(type="text/javascript")
     Cufon.now();

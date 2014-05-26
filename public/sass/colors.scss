@@ -1,2 +1,16 @@
-$brandColor: rgb(0, 175, 160);
+// orange as main
+$brandColor: rgb(255, 141, 0);
+$altBrandColor: #13a89e;
+
+// teal as main
+$brandColor: #13a89e;
 $altBrandColor: rgb(255, 141, 0);
+
+$linkColor: $brandColor;
+$linkHoverColor: lighten($linkColor, 8%);
+
+$headerBackgroundColor: rgba(255, 255, 255, .85);
+$headerBrandLinkColor: $brandColor;
+
+$textColor: #4d4d4d;
+$lightTextColor: #999;

@@ -5,7 +5,7 @@ require('sugar');
 var app = express();
 
 var conf = {
-  title: 'Site 3 coLaboratory',
+  title: 'Site 3 coLaboratory art and technology workspace in Toronto',
   site_url: 'http://site3.ca'
 };
 

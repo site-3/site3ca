@@ -1,27 +1,33 @@
 @import "compass/reset";
+@import "compass/css3/border-radius";
 @import "compass/utilities/general/clearfix";
 @import "colors";
+
 @import "typo";
-@import "header";
-@import "footer";
+@import "header_and_footer";
 
 body {
   background-image: url(/images/bg.jpg);
   background-size: cover;
-  color: #eee;
+  color: $textColor;
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
   font-family: sans-serif;
-  font-size: 13pt;
+}
+
+strong {
+  font-weight: bold;
 }
 
 .background-mask {
+  opacity: .2;
   position: fixed;
   top: 0;
   bottom: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,.75);
+  background: url(/images/mask.png);
+  z-index: -1;
 }
 
 p {
@@ -29,17 +35,17 @@ p {
 }
 
 ul {
-  list-style: circle;
+  list-style: disc;
   margin-left: 2em;
   margin-bottom: 1em;
 }
 
 a {
-  color: $brandColor;
+  color: $linkColor;
 }
 
 a:hover {
-  color: lighten($brandColor, 10%);
+  color: $linkHoverColor;
 }
 
 a:focus, .btn:focus {
@@ -47,16 +53,50 @@ a:focus, .btn:focus {
 }
 
 #main {
-  min-height: 100%;
-  padding: 0 5em;
 }
 
 .container {
-  padding: 0 80px;
+  padding: 0;
   width: auto !important;
   position: relative;
   max-width: 1125px !important;
   margin: 0 auto;
   clear: both;
-  @include clearfix;
+}
+
+.content {
+  background: $headerBackgroundColor;
+  padding: 20px;
+  @include border-radius(3px);
+  margin-top: 40px;
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.btn {
+  border: 3px solid $linkColor;
+  font-weight: bold;
+  padding: .4em .8em;
+  display: inline-block;
+  @include border-radius(20px);
+
+  &:hover {
+    text-decoration: none;
+    border-color: $linkHoverColor;
+  }
+}
+
+.landing {
+  color: #fff;
+  opacity: .85;
+  padding-top: 80pt;
+  font-size: 32pt;
+  width: 20em;
+  margin: 0 auto;
+
+  p {
+    line-height: 1.1;
+  }
 }
