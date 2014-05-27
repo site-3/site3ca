@@ -44,6 +44,7 @@ app.get('/', function(req, res){
   app.get('/' + string, function(req, res){
     app.locals.page_title = string.capitalize();
     res.render(string);
+    app.locals.page_title = undefined;
   });
 });
 
