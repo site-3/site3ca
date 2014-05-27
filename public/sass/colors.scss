@@ -2,13 +2,16 @@
 $brandColor: rgb(255, 141, 0);
 $altBrandColor: #13a89e;
 
+// gray/blue as main
+$altBrandColor: #708690;
+$brandColor: rgb(255, 141, 0);
+
 // teal as main
 $brandColor: #13a89e;
 $altBrandColor: rgb(255, 141, 0);
 
-$headerColor: $altBrandColor;
-
-$linkColor: $brandColor;
+$headerColor: $brandColor;
+$linkColor: $altBrandColor;
 $linkHoverColor: lighten($linkColor, 8%);
 
 $headerBackgroundColor: rgba(255, 255, 255, .85);
