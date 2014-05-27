@@ -139,7 +139,15 @@ $headerFooterTextColor: $textColor;
     background-size: contain;
     background-position: right center;
 
-    p {
+    a {
+      color: $textColor;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .promo-content {
       padding-top: 10px;
       padding-left: 10px;
       padding-right: 100px;
