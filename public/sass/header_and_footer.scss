@@ -44,10 +44,10 @@ $headerFooterTextColor: $textColor;
     }
 
     .tagline {
-      font-weight: 600;
+      font-weight: 400;
       display: block;
       line-height: 1.3;
-      color: lighten($headerFooterTextColor, 20%);
+      color: lighten($headerFooterTextColor, 25%);
     }
   }
 
