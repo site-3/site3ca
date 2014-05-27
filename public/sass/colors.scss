@@ -6,6 +6,8 @@ $altBrandColor: #13a89e;
 $brandColor: #13a89e;
 $altBrandColor: rgb(255, 141, 0);
 
+$headerColor: $altBrandColor;
+
 $linkColor: $brandColor;
 $linkHoverColor: lighten($linkColor, 8%);
 

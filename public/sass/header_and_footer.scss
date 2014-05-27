@@ -3,13 +3,13 @@
 @import "compass/css3/border-radius";
 
 $footerHeight: 200px;
-$footerMarginTop: 0px;
+$footerMarginTop: 40px;
 
-$headerFooterTextColor: #4d4d4d;
+$headerFooterTextColor: $textColor;
 
 .pre-footer {
   min-height: 100vh;
-  padding-bottom: $footerHeight;
+  padding-bottom: $footerHeight + $footerMarginTop;
 }
 
 .header {
@@ -82,10 +82,9 @@ $headerFooterTextColor: #4d4d4d;
 
 .footer {
   height: $footerHeight;
-  margin-top: -$footerHeight + $footerMarginTop;
+  margin-top: -$footerHeight;
   font-size: 12pt;
   background: $headerBackgroundColor;
-  color: $headerFooterTextColor;
 
   .container {
     padding: 1em 0;
