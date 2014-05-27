@@ -59,16 +59,19 @@ html
             tr.member-hours
               td(colspan="2") 24/7 access is available with a <a href="/membership">membership</a>
         .col-md-4
-          h3.heading Contact
-          p Email us at <a href="mailto:info@site3.ca">info@site3.ca</a>
-          .social-icons
-            a(href="https://twitter.com/site3colab", target="_blank")
-              img(src="/images/twitter-logo.png")
-            a(href="https://www.facebook.com/site3colab", target="_blank")
-              img(src="/images/facebook-logo.png")
+          #promo-section
+            p Visit Site Bee! <br />Site 3's affiliated Popup Store <br/>1550 Queen St West<br /><span class="small">May 25 to July 25</span>
         .col-md-4.footer-map
-          #footer-map
+          #footer-map-holder
+            #footer-map
           a(href="location") Complete map and location &rarr;
+      .container.footer-contact
+        p
+          | Email us at <a href="mailto:info@site3.ca">info@site3.ca</a>
+          a.social-icon(href="https://twitter.com/site3colab", target="_blank")
+            img(src="/images/twitter-logo.png")
+          a.social-icon(href="https://www.facebook.com/site3colab", target="_blank")
+            img(src="/images/facebook-logo.png")
 
   script(type="text/javascript")
     Cufon.now();

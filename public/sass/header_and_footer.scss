@@ -2,8 +2,10 @@
 @import "colors";
 @import "compass/css3/border-radius";
 
-$footerHeight: 200px;
+$footerHeight: 250px;
 $footerMarginTop: 40px;
+$footerBoxBackground: #fff;
+$footerBoxBorderColor: rgba(0,0,0,.2);
 
 $headerFooterTextColor: $textColor;
 
@@ -110,22 +112,59 @@ $headerFooterTextColor: $textColor;
     }
   }
 
-  .social-icons {
-    img {
-      margin-right: 10px;
+  .footer-contact {
+    padding-top: 0;
+
+    text-align: center;
+    p {
+      margin: 0;
+    }
+
+    .social-icon {
+      img {
+        margin-left: 10px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  #promo-section {
+    height: 140px;
+    width: 100%;
+    border: 5px solid $footerBoxBorderColor;
+    @include border-radius(3px);
+    background-color: $footerBoxBackground;
+    background-image: url(/images/promo-site-bee-logo.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+
+    p {
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-right: 100px;
+
+      .small {
+        color: $lightTextColor;
+      }
     }
   }
 
   .footer-map {
     text-align: right;
 
-    #footer-map {
+    #footer-map-holder {
+      background: $footerBoxBackground;
+      border: 5px solid $footerBoxBorderColor;
+      @include border-radius(3px);
       float: right;
       height: 140px;
-      width: 300px;
-      background: rgba(0, 0, 0, .5);
-      border: 5px solid rgba(0,0,0,.1);
-      @include border-radius(3px);
+      width: 320px;
+    }
+
+    #footer-map {
+      height: 100%;
+      width: 100%;
     }
   }
 }
