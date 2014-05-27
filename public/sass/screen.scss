@@ -91,13 +91,17 @@ a:focus, .btn:focus {
 .landing {
   color: #fff;
   opacity: .85;
-  padding-top: 80pt;
+  padding-top: 40px;
   font-size: 32pt;
   width: 20em;
   margin: 0 auto;
 
   p {
     line-height: 1.1;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
   }
 }
 
