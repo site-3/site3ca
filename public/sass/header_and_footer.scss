@@ -29,10 +29,11 @@ $headerFooterTextColor: $textColor;
     img {
       position: absolute;
       left: 0;
+      top: 5px;
     }
 
     a {
-      color: $headerFooterTextColor;
+      color: $brandColor;
       font-size: 23pt;
       line-height: 1;
       text-wrap: nowarp;
@@ -107,7 +108,7 @@ $headerFooterTextColor: $textColor;
       color: $lightTextColor;
     }
     .callout {
-      color: $brandColor;
+      color: $brightBrandColor;
     }
   }
 
