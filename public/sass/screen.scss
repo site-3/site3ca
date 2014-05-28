@@ -73,6 +73,12 @@ a:focus, .btn:focus {
   p:last-child {
     margin-bottom: 0;
   }
+
+  &.just-text {
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: 40px;
+  }
 }
 
 .btn {
