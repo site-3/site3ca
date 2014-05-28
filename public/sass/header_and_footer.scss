@@ -152,6 +152,10 @@ $headerFooterTextColor: $textColor;
       padding-left: 10px;
       padding-right: 100px;
 
+      h3 {
+        color: $brightBrandColor;
+      }
+
       .small {
         color: $lightTextColor;
       }
