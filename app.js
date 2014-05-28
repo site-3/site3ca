@@ -12,7 +12,7 @@ var conf = {
 app.locals.title = conf.title;
 
 app.configure(function(){
-  app.set('port', process.env.PORT || 8881);
+  app.set('port', process.env.PORT || 8882);
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
   app.use(express.logger('dev'));
