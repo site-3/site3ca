@@ -4,7 +4,6 @@
 @import "colors";
 
 @import "typo";
-@import "header_and_footer";
 
 body {
   background-image: url(/images/bg.jpg);
@@ -17,6 +16,11 @@ body {
 
 strong {
   font-weight: bold;
+}
+
+.bordered-box {
+  border: 5px solid $borderColor;
+  @include border-radius(3px);
 }
 
 .background-mask {
@@ -117,7 +121,190 @@ a:focus, .btn:focus {
   .project-image {
     float: left;
     margin-right: 10pt;
-    border: 5px solid $borderColor;
-    @include border-radius(3px);
+    @extend .bordered-box;
+  }
+}
+
+// Header and footer stuff
+
+$footerHeight: 240px;
+$footerMarginTop: 40px;
+$footerBoxBackground: #fff;
+
+$headerFooterTextColor: $textColor;
+
+.pre-footer {
+  min-height: 100vh;
+  padding-bottom: $footerHeight + $footerMarginTop;
+}
+
+.header {
+  $headerLinkColor: $headerFooterTextColor;
+  $headerLinkHoverColor: #000;
+
+  width: 100%;
+  margin: 0;
+  background: $headerBackgroundColor;
+
+  .brand {
+    float: left;
+    margin-top: .5em;
+    padding-left: 80px;
+
+    img {
+      position: absolute;
+      left: 0;
+      top: 5px;
+    }
+
+    a {
+      color: $brandColor;
+      font-size: 23pt;
+      line-height: 1;
+      text-wrap: nowarp;
+
+      &:hover {
+        color: $headerBrandLinkColor;
+      }
+    }
+
+    .tagline {
+      font-weight: 400;
+      display: block;
+      line-height: 1.3;
+      color: lighten($headerFooterTextColor, 25%);
+    }
+  }
+
+  .nav {
+    float: right;
+    padding: 0;
+    margin: 0;
+
+    li {
+      display: inline-block;
+    }
+
+    a {
+      text-transform: uppercase;
+      font-weight: bold;
+      padding: 1.5em 1em;
+      display: inline-block;
+      color: $headerLinkColor;
+
+      &:hover {
+        color: $headerLinkHoverColor;
+      }
+    }
+  }
+
+  .nav > li:last-child > a {
+    padding-right: 0;
+  }
+
+  .nav > li:first-child > a {
+    padding-left: 0;
+  }
+}
+
+.footer {
+  height: $footerHeight;
+  margin-top: -$footerHeight;
+  font-size: 12pt;
+  background: $headerBackgroundColor;
+
+  .container {
+    padding: 1em 0;
+  }
+
+  .heading {
+    margin-bottom: .25em;
+    margin-top: 0;
+  }
+
+  .hours {
+    td {
+      padding-right: 1em;
+    }
+    .member-hours {
+      color: $lightTextColor;
+    }
+    span {
+      color: $lightTextColor;
+    }
+    .callout {
+      color: $brightBrandColor;
+    }
+  }
+
+  .footer-contact {
+    padding-top: 0;
+
+    text-align: center;
+    p {
+      margin: 0;
+    }
+
+    .social-icon {
+      img {
+        margin-left: 10px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  #promo-section {
+    height: 140px;
+    width: 100%;
+    @extend .bordered-box;
+    background-color: $footerBoxBackground;
+    background-image: url(/images/promo-site-bee-logo.jpg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: right center;
+
+    a {
+      color: $textColor;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .promo-content {
+      padding-top: 10px;
+      padding-left: 10px;
+      padding-right: 100px;
+
+      h3 {
+        color: $brightBrandColor;
+      }
+
+      .small {
+        color: $lightTextColor;
+      }
+    }
+  }
+
+  .footer-map {
+    text-align: right;
+
+    #footer-map-holder {
+      background: $footerBoxBackground;
+      @extend .bordered-box;
+      float: right;
+      height: 140px;
+      width: 320px;
+    }
+
+    #footer-map {
+      height: 100%;
+      width: 100%;
+    }
+
+    a {
+      display: block;
+      clear: both;
+    }
   }
 }
