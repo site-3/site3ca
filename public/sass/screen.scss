@@ -50,10 +50,10 @@ ul {
 
 a {
   color: $linkColor;
-}
 
-a:hover {
-  color: $linkHoverColor;
+  &:hover {
+    color: $linkHoverColor;
+  }
 }
 
 a:focus, .btn:focus {
@@ -235,9 +235,6 @@ $headerFooterTextColor: $textColor;
     }
     span {
       color: $lightTextColor;
-    }
-    .callout {
-      color: $brightBrandColor;
     }
   }
 

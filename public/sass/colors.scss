@@ -14,7 +14,7 @@ $brightBrandColor: $altBrandColor;
 
 $headerColor: $brandColor;
 $linkColor: $altBrandColor;
-$linkHoverColor: lighten($linkColor, 8%);
+$linkHoverColor: darken($linkColor, 8%);
 
 $headerBackgroundColor: rgba(255, 255, 255, .85);
 $headerBrandLinkColor: $brandColor;
