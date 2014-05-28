@@ -254,6 +254,7 @@ $headerFooterTextColor: $textColor;
   }
 
   #promo-section {
+    display: block;
     height: 140px;
     width: 100%;
     @extend .bordered-box;
@@ -263,12 +264,10 @@ $headerFooterTextColor: $textColor;
     background-size: contain;
     background-position: right center;
 
-    a {
-      color: $textColor;
+    color: $textColor;
 
-      &:hover {
-        text-decoration: none;
-      }
+    &:hover {
+      text-decoration: none;
     }
 
     .promo-content {
