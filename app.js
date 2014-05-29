@@ -40,7 +40,7 @@ app.get('/', function(req, res){
   res.render('index');
 });
 
-['about', 'membership', 'classes', 'tools', 'projects'].each(function(string){
+['about', 'membership', 'classes', 'tools', 'projects', 'location'].each(function(string){
   app.get('/' + string, function(req, res){
     app.locals.page_title = string.capitalize();
     res.render(string);
