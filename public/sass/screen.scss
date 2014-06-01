@@ -74,18 +74,15 @@ a:focus, .btn:focus {
 
 .content {
   background: $headerBackgroundColor;
-  padding: 20px;
+  padding: 30px 40px;
   @include border-radius(3px);
+  margin-top: 40px;
+  max-width: 900px;
+  margin: 0 auto;
   margin-top: 40px;
 
   p:last-child {
     margin-bottom: 0;
-  }
-
-  &.just-text {
-    max-width: 900px;
-    margin: 0 auto;
-    margin-top: 40px;
   }
 }
 
@@ -121,6 +118,10 @@ a:focus, .btn:focus {
 
 .project {
   margin-bottom: 10pt;
+  padding-top: 1px;
+  margin-top: 10px;
+  clear: both;
+  min-height: 243px;
 
   .project-image {
     float: left;
@@ -235,11 +236,17 @@ $headerFooterTextColor: $textColor;
   }
 
   .hours {
+    h3 {
+      padding-bottom: 6px;
+    }
     td {
       padding-right: 1em;
     }
     .member-hours {
       color: $lightTextColor;
+      td {
+        padding-top: 6px;
+      }
     }
     span {
       color: $lightTextColor;
