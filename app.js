@@ -40,6 +40,18 @@ app.get('/', function(req, res){
   res.render('index');
 });
 
+app.get('/about/location/', function(req, res){
+  res.redirect('/location');
+});
+
+app.get('/learning/', function(req, res){
+  res.redirect('/classes');
+});
+
+app.get('/events/open/', function(req, res){
+  res.redirect('/classes');
+});
+
 ['about', 'membership', 'classes', 'tools', 'projects', 'location'].each(function(string){
   app.get('/' + string, function(req, res){
     app.locals.page_title = string.capitalize();
