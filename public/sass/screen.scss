@@ -275,7 +275,7 @@ $headerFooterTextColor: $textColor;
     width: 100%;
     @extend .bordered-box;
     background-color: $footerBoxBackground;
-    background-image: url(/images/promo-site-bee-logo.jpg);
+    background-image: url(/images/promo-halloween-party-2014.jpg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: right center;
@@ -289,12 +289,13 @@ $headerFooterTextColor: $textColor;
     }
 
     .promo-content {
-      padding-top: 10px;
+      padding-top: 5px;
       padding-left: 10px;
       padding-right: 100px;
 
       h3 {
         color: $brightBrandColor;
+        padding-bottom: 3px;
       }
 
       .small {
