@@ -159,16 +159,19 @@ $headerFooterTextColor: $textColor;
   margin: 0;
   background: $headerBackgroundColor;
 
+  .header-logo {
+    background: url('/images/header-logo.png');
+    position: absolute;
+    left: 0;
+    top: 5px;
+    width: 80px;
+    height: 78px;
+  }
+
   .brand {
     float: left;
     margin-top: .5em;
     padding-left: 80px;
-
-    img {
-      position: absolute;
-      left: 0;
-      top: 5px;
-    }
 
     a {
       color: $brandColor;
@@ -277,7 +280,7 @@ $headerFooterTextColor: $textColor;
     background-color: $footerBoxBackground;
     background-image: url(/images/promo-halloween-party-2014.jpg);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     background-position: right center;
 
     color: $textColor;
@@ -326,4 +329,8 @@ $headerFooterTextColor: $textColor;
       clear: both;
     }
   }
+}
+
+@media (max-width: 800px) {
+  @import "mobile";
 }
