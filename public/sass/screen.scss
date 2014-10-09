@@ -2,12 +2,10 @@
 @import "compass/css3/border-radius";
 @import "compass/utilities/general/clearfix";
 @import "colors";
-
+@import "variables";
 @import "typo";
 
 body {
-  background-image: url(/images/bg.jpg);
-  background-size: cover;
   color: $textColor;
   line-height: 1.4;
   -webkit-font-smoothing: antialiased;
@@ -25,17 +23,6 @@ strong {
 
 .bordered-box-hover {
   border-color: rgba($brightBrandColor, .4);
-}
-
-.background-mask {
-  opacity: .2;
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background: url(/images/mask.png);
-  z-index: -1;
 }
 
 p {
@@ -60,9 +47,6 @@ a:focus, .btn:focus {
   outline: none;
 }
 
-#main {
-}
-
 .container {
   padding: 0;
   width: auto !important;
@@ -73,13 +57,8 @@ a:focus, .btn:focus {
 }
 
 .content {
-  background: $headerBackgroundColor;
-  padding: 30px 40px;
-  @include border-radius(3px);
-  margin-top: 40px;
   max-width: 900px;
   margin: 0 auto;
-  margin-top: 40px;
 
   p:last-child {
     margin-bottom: 0;
@@ -104,7 +83,7 @@ a:focus, .btn:focus {
   opacity: .85;
   padding-top: 40px;
   font-size: 32pt;
-  width: 20em;
+  max-width: 20em;
   margin: 0 auto;
 
   p {
@@ -140,17 +119,6 @@ a:focus, .btn:focus {
 
 // Header and footer stuff
 
-$footerHeight: 240px;
-$footerMarginTop: 40px;
-$footerBoxBackground: #fff;
-
-$headerFooterTextColor: $textColor;
-
-.pre-footer {
-  min-height: 100vh;
-  padding-bottom: $footerHeight + $footerMarginTop;
-}
-
 .header {
   $headerLinkColor: $headerFooterTextColor;
   $headerLinkHoverColor: #000;
@@ -159,8 +127,13 @@ $headerFooterTextColor: $textColor;
   margin: 0;
   background: $headerBackgroundColor;
 
+  .container {
+    z-index: 1;
+  }
+
   .header-logo {
     background: url('/images/header-logo.png');
+    background-size: 80px 78px;
     position: absolute;
     left: 0;
     top: 5px;
@@ -224,8 +197,6 @@ $headerFooterTextColor: $textColor;
 }
 
 .footer {
-  height: $footerHeight;
-  margin-top: -$footerHeight;
   font-size: 12pt;
   background: $headerBackgroundColor;
 
@@ -265,9 +236,20 @@ $headerFooterTextColor: $textColor;
     }
 
     .social-icon {
-      img {
-        margin-left: 10px;
-        vertical-align: middle;
+      margin-left: 10px;
+      vertical-align: middle;
+      height: 20px;
+      width: 22px;
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-size: contain;
+
+      &.social-icon-twitter {
+        background-image: url(/images/twitter-logo.png);
+      }
+
+      &.social-icon-facebook {
+        background-image: url(/images/facebook-logo.png);
       }
     }
   }
@@ -275,8 +257,6 @@ $headerFooterTextColor: $textColor;
   #promo-section {
     display: block;
     height: 140px;
-    width: 100%;
-    @extend .bordered-box;
     background-color: $footerBoxBackground;
     background-image: url(/images/promo-halloween-party-2014.jpg);
     background-repeat: no-repeat;
@@ -333,4 +313,8 @@ $headerFooterTextColor: $textColor;
 
 @media (max-width: 800px) {
   @import "mobile";
+}
+
+@media (min-width: 800px) {
+  @import "not-mobile";
 }

@@ -1,9 +1,24 @@
 body {
-  background: none;
+  background: #ddd;
 }
 
 .content {
   padding: 20px;
+}
+
+.header {
+  height: 70px;
+
+  .nav {
+    display: none;
+    float: none;
+    li {
+      display: block;
+      & > a, &:first-child > a {
+        padding: 0.5em 1em;
+      }
+    }
+  }
 }
 
 .footer {
@@ -16,4 +31,23 @@ body {
   .footer-map #footer-map-holder {
     width: 100%;
   }
+
+  .nav {
+    list-style: none;
+    text-align: center;
+    margin: 0 0 8px 0;
+
+    a {
+      padding: 4px 0;
+      display: block;
+    }
+  }
+}
+
+.landing {
+  font-size: 16pt;
+  padding: 15px;
+  background: #aaa;
+  background-image: url(/images/bg.jpg);
+  background-size: cover;
 }

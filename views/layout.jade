@@ -71,12 +71,15 @@ html
             #footer-map
           a(href="/location") view full map and location
       .container.footer-contact
+        ul.nav
+          li: a(href="/about") About
+          li: a(href="/membership") Membership
+          li: a(href="/classes") Events / Classes
+          li: a(href="/projects") Projects
         p
           | contact us at <a href="mailto:info@site3.ca">info@site3.ca</a>
-          a.social-icon(href="https://twitter.com/site3colab", target="_blank")
-            img(src="/images/twitter-logo.png")
-          a.social-icon(href="https://www.facebook.com/site3colab", target="_blank")
-            img(src="/images/facebook-logo.png")
+          a.social-icon.social-icon-twitter(href="https://twitter.com/site3colab", target="_blank")
+          a.social-icon.social-icon-facebook(href="https://www.facebook.com/site3colab", target="_blank")
 
   script(type="text/javascript")
     Cufon.now();
