@@ -8,10 +8,10 @@
   "dependencies": {
     "jade": "*",
     "jade-ext": "*",
-    "express": "~3.x",
+    "express": "~3.x"
   },
   "devDependencies": {
-    "grunt-contrib-compass": "*"
+    "grunt-contrib-compass": "*",
     "grunt-contrib-watch": "*"
   }
 }
