@@ -183,6 +183,7 @@ a:focus, .btn:focus {
 
       &:hover {
         color: $headerLinkHoverColor;
+        background: transparent;
       }
     }
   }
