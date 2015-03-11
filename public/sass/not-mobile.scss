@@ -42,3 +42,10 @@ body {
   @include border-radius(3px);
   margin-top: 40px;
 }
+
+.page-landing {
+  .hero-content {
+    padding-top: 40px;
+    max-width: 20em;
+  }
+}

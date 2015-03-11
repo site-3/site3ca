@@ -78,20 +78,21 @@ a:focus, .btn:focus {
   }
 }
 
-.landing {
-  color: #fff;
-  opacity: .85;
-  padding-top: 40px;
-  font-size: 32pt;
-  max-width: 20em;
-  margin: 0 auto;
+.page-landing {
+  .hero-content {
+    color: #fff;
+    opacity: .85;
+    padding-top: 40px;
+    font-size: 32pt;
+    margin: 0 auto;
 
-  p {
-    line-height: 1.1;
-  }
+    p {
+      line-height: 1.1;
+    }
 
-  p:last-child {
-    margin-bottom: 0;
+    p:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -312,10 +313,12 @@ a:focus, .btn:focus {
   }
 }
 
-@media (max-width: 800px) {
+$medium-breakpoint: 992px;
+
+@media (max-width: $medium-breakpoint) {
   @import "mobile";
 }
 
-@media (min-width: 800px) {
+@media (min-width: $medium-breakpoint) {
   @import "not-mobile";
 }
