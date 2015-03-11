@@ -3,7 +3,7 @@ $(document).ready(function(){
   // keep the landing div centered
   $(window).on('resize', function(){
     var $window = $(window);
-    var $landing = $('.landing');
+    var $landing = $('.page-landing .hero-content');
     var $header = $('.header');
     var $footer = $('.footer');
     var marginTop = Math.max(0, ($window.height() - $header.height() - $footer.height() - $landing.height() - 80) / 2)

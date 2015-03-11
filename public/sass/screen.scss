@@ -78,20 +78,21 @@ a:focus, .btn:focus {
   }
 }
 
-.landing {
-  color: #fff;
-  opacity: .85;
-  padding-top: 40px;
-  font-size: 32pt;
-  max-width: 20em;
-  margin: 0 auto;
+.page-landing {
+  .hero-content {
+    color: #fff;
+    opacity: .85;
+    padding-top: 40px;
+    font-size: 32pt;
+    margin: 0 auto;
 
-  p {
-    line-height: 1.1;
-  }
+    p {
+      line-height: 1.1;
+    }
 
-  p:last-child {
-    margin-bottom: 0;
+    p:last-child {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -186,10 +187,6 @@ a:focus, .btn:focus {
         background: transparent;
       }
     }
-  }
-
-  .nav > li:last-child > a {
-    padding-right: 0;
   }
 
   .nav > li:first-child > a {
@@ -312,10 +309,27 @@ a:focus, .btn:focus {
   }
 }
 
-@media (max-width: 800px) {
+$medium-breakpoint: 992px;
+
+@media (max-width: $medium-breakpoint) {
   @import "mobile";
 }
 
-@media (min-width: 800px) {
+@media (min-width: $medium-breakpoint) {
   @import "not-mobile";
+}
+
+@media (min-width: $medium-breakpoint) and (max-width: 1060px) {
+  .footer .hours td {
+    display: inline-block;
+    padding-right: .5em;
+  }
+}
+
+@media (min-width: 1170px) {
+  .header {
+    .nav > li:last-child > a {
+      padding-right: 0;
+    }
+  }
 }

@@ -44,10 +44,14 @@ body {
   }
 }
 
-.landing {
-  font-size: 16pt;
-  padding: 15px;
-  background: #aaa;
-  background-image: url(/images/bg.jpg);
-  background-size: cover;
+.page-landing {
+  #main {
+    background: #aaa;
+    background-image: url(/images/bg.jpg);
+    background-size: cover;
+  }
+  .hero-content {
+    font-size: 16pt;
+    padding: 15px;
+  }
 }
