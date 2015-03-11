@@ -189,10 +189,6 @@ a:focus, .btn:focus {
     }
   }
 
-  .nav > li:last-child > a {
-    padding-right: 0;
-  }
-
   .nav > li:first-child > a {
     padding-left: 0;
   }
@@ -327,5 +323,13 @@ $medium-breakpoint: 992px;
   .footer .hours td {
     display: inline-block;
     padding-right: .5em;
+  }
+}
+
+@media (min-width: 1170px) {
+  .header {
+    .nav > li:last-child > a {
+      padding-right: 0;
+    }
   }
 }
