@@ -322,3 +322,10 @@ $medium-breakpoint: 992px;
 @media (min-width: $medium-breakpoint) {
   @import "not-mobile";
 }
+
+@media (min-width: $medium-breakpoint) and (max-width: 1060px) {
+  .footer .hours td {
+    display: inline-block;
+    padding-right: .5em;
+  }
+}
