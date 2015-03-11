@@ -23,6 +23,7 @@ app.configure(function(){
 
 // Handle 404
 app.use(function(req, res) {
+  app.locals.body_class = "404";
   res.render('404');
 });
 
@@ -37,6 +38,7 @@ app.configure('development', function(){
 });
 
 app.get('/', function(req, res){
+  app.locals.body_class = "landing";
   res.render('index');
 });
 
@@ -55,6 +57,7 @@ app.get('/events/open/', function(req, res){
 ['about', 'membership', 'classes', 'tools', 'projects', 'location'].each(function(string){
   app.get('/' + string, function(req, res){
     app.locals.page_title = string.capitalize();
+    app.locals.body_class = string;
     res.render(string);
     app.locals.page_title = undefined;
   });
